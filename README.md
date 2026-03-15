@@ -4,17 +4,21 @@
 
 ---
 
-Proyek ini adalah lanjutan dari proyek sebelumnya, pada kali ini website portofolio nya dibuat menjadi web dinamis, website ini menampilkan data yang diambil langsung dari database untuk memberikan kemudahan dalam pengelolaan konten.
+Proyek ini adalah lanjutan dari proyek sebelumnya, pada kali ini website portofolio nya dibuat menjadi web dinamis,dirancang agar pengelolaan konten portofolio menjadi lebih efisien. Tidak seperti web statis tradisional, website ini memisahkan antara struktur tampilan dan data konten menggunakan integrasi Database.
 
-## 🚀 Fitur Utama
-- **Responsive Design**: Tampilan yang menyesuaikan di berbagai perangkat (Mobile, Tablet, Desktop).
-- **Dynamic Content**: Data profil, pengalaman, skill, dan sertifikat dimuat secara dinamis dari database.
-- **Certificate Gallery**: Fitur untuk melihat sertifikat dalam ukuran penuh menggunakan modal interaktif.
+## 🔗 Integrasi Database & Program
+Fokus utama dari proyek ini adalah menciptakan ekosistem di mana **Data Drive the UI** (Data mengendalikan tampilan):
+- Perubahan informasi (seperti menambah skill baru atau mengubah deskripsi diri) dilakukan melalui database tanpa menyentuh file kode.
+- Menggunakan PHP sebagai jembatan, data dari tabel MySQL dipetakan secara otomatis ke komponen frontend.
+- Semua aset dan informasi tersimpan secara aman di database, memungkinkan skalabilitas jika di masa depan ingin ditambahkan fitur Admin Panel.
 
-### Backend & Database
-- **PHP**: Sebagai core logic dan penghubung ke database.
-- **MySQL**: Sebagai media penyimpanan data (RDBMS).
+## 🛠️ Teknologi Yang Diterapkan
+1. **Database (MySQL)**: Sebagai otak aplikasi yang menyimpan entitas `profile`, `experiences`, `skills`, dan `certificates`.
+2. **Backend (PHP)**: Sebagai mesin pengolah yang melakukan koneksi dan mengambil data dari database untuk disajikan ke web.
+3. **Frontend Reaktif (Vue.js 3)**: Digunakan untuk merender data dari database secara dinamis. Vue menangani logika tampilan seperti *looping* data skills dan modal sertifikat agar interaksi terasa lebih halus.
 
-### Frontend
-- **Bootstrap 5**: Framework CSS untuk tata letak dan komponen UI.
-- **Vue.js 3**: Framework JavaScript untuk pengelolaan status data di sisi client.
+## 📂 Penjelasan Isi Database
+- `profile`: Menyimpan data personal (Nama, Foto, About Me).
+- `skills`: Menyimpan daftar keahlian beserta persentase levelnya.
+- `experiences`: Menyimpan riwayat pengalaman atau pendidikan.
+- `certificates`: Menyimpan data dokumen sertifikasi (Judul, Penerbit, Tahun, Link Gambar).
